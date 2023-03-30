@@ -5,6 +5,7 @@ p{
     font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
    
 } */
+
 body{
     position: relative;
 }
@@ -24,7 +25,7 @@ body{
      
 }
 .menu:hover{
-    color: rgb(31, 126, 110);
+    color: #023047;
     text-decoration: inherit
 }
 .menu-contact{
@@ -58,7 +59,7 @@ body{
   .start:hover{
     cursor: pointer;
     color: white;
-    background-color: rgb(31, 126, 110);
+    background-color: #023047;
     transition: 0.3s;
     text-decoration: none;
     
@@ -86,7 +87,7 @@ body{
     padding: 2.5em;
 }
 .judul {
-    color: rgb(31, 126, 110);
+    color: #023047;
 }
 .judul-putih {
     color: white;
@@ -95,11 +96,25 @@ body{
 .sekolah{
     margin-left: 100
 }
+.btn-map{
+ color:#023047;
+ border: 2px solid #023047 ;
+ width: 200px;
+ height: 300px;
+ text-decoration: none;
+ padding: 10px 50px;
+ border-radius: 5px;
+ background-color: none;
+}
+.btn-map:hover{
+    text-decoration: none;
+    color: #023047;
+}
 .experience-item .number {
     width: 50px;
     height: 50px;
     border: 4px solid #fff;
-    background: rgb(31, 126, 110);
+    background: #023047;
     color: #fff;
     line-height: 44px;
     font-weight: 300;
@@ -137,6 +152,32 @@ body{
     .bg-foto > .container {
       position: relative;
       z-index: 1; }
+.bg{
+    height: 100%;  width:100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+    @media (min-aspect-ratio: 8/5) {
+        .bg{ 
+        background-image: url("img/foto4.png"); height: 100%;  width:100%;
+        }
+    }
+    @media (max-aspect-ratio: 3/2) {
+        .bg{ 
+        background-image: url("img/foto3.png"); height: 100%;  width:100%;
+        }
+    }
+    @media (aspect-ratio: 1/1)  {
+        .bg { 
+        background-image: url("img/foto3.png"); height: 100%;  width:100%;
+        }
+    }
+    
+   
+ 
 .sub-project{
     font-size: 16px;
     font-family: Arial, Helvetica, sans-serif;
@@ -170,7 +211,7 @@ body{
     font-size: 17px
 }
 .btn-color{
-    color: rgb(31, 126, 110);
+    color: #023047;
 }
 .foto-portofolio-sosial-media{
     border-radius: 100%;
@@ -247,3 +288,46 @@ body{
     width: auto;
     height: 200px;
 }
+.launch-time{
+    display: flex;
+    justify-content: center;
+    
+}
+.launch-time div{
+    flex-basis: 100px;
+    
+}
+.animation{
+    position: relative;
+    animation-name: example;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+@keyframes example {
+    from {top: 200px; opacity: 0;}
+    to {top: 0px; opacity: 1;}
+  }
+.launch-time div p{
+    font-size: 50px;
+    margin-bottom: -14px;
+    color: white;
+}
+.launch-time div span{
+    color: white;
+}
+.event{
+    display: flex;
+}
+
+.reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 2s all ease;
+  }
+  
+  .reveal.active{
+    transform: translateY(0);
+    opacity: 1;
+  }
+

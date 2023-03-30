@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Portofolio</title>
+    <title>Halal Bi Halal</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -9,19 +9,58 @@
     <link rel="stylesheet" href="bootstrap.css">
     <link rel="stylesheet" href="script.js">
     <!-- <link rel="stylesheet" href="aos.css"> -->
+  
     
   </head>
   <body>
+    <script>
+    var countDownDate = new Date("April 23, 2023 10:00:00").getTime();
+    var x = setInterval(function(){
+      var now = new Date().getTime();
+      var distance = countDownDate - now;
+
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor(distance % (1000 * 60 * 60 * 24) / (1000 * 60 * 60 ));
+      var minutes = Math.floor(distance % (1000 * 60 * 60 ) / (1000 * 60 ));
+      var seconds = Math.floor(distance % (1000 * 60 ) / 1000 );
+
+      document.getElementById("days").innerHTML = days;
+      document.getElementById("hours").innerHTML = hours;
+      document.getElementById("minutes").innerHTML = minutes;
+      document.getElementById("seconds").innerHTML = seconds;
+
+
+    },1000);
+    // transition scroll page 
+    function reveal() {
+  var reveals = document.querySelectorAll(".reveal");
+
+  for (var i = 0; i < reveals.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = reveals[i].getBoundingClientRect().top;
+    var elementVisible = 150;
+
+    if (elementTop < windowHeight - elementVisible) {
+      reveals[i].classList.add("active");
+    } else {
+      reveals[i].classList.remove("active");
+    }
+  }
+}
+
+window.addEventListener("scroll", reveal);
+ 
+   </script>
         <header>
-            <div class="container " >
+            <div class="container" >
                     <nav class="fixed-top navbar-expand-sm bg-light ">
                        <div class="col-12 col-md-12 d-none d-xl-block">
-                        <div class="row align-items-center navigasi">
+                        <!-- <div class="row align-items-center navigasi">
                                 <div class="col-md-7 mb-2 order-md-1 mb-lg-0">
         
                                 </div>
                                     <div class="col-md-5 mb-2 order-md-1 mb-lg-0 " >
-                                      <!-- <div class="fix-position"> -->
+                                      
                                           <a href="#section-home"  class="menu">Home</a>
                                           <a href="#section-about" class="menu">About</a>  
                                           <a href="#section-experience" class="menu">Experience</a>
@@ -29,20 +68,42 @@
                                           <a href="#section-contact" class="menu">Contact</a>
                                       </div>
                                          
-                                    <!-- </div> -->
-                        </div>
+                                    
+                        </div> -->
                        </div>    
                     </nav>
             </div>       
         </header>
   
-        <div class="site-blocks-cover overlay " style="background-image: url(img/foto2.PNG); padding-bottom: 200px; padding-top: 10px" id="section-home" >
+        <div class="site-blocks-cover overlay bg" style="padding-bottom: 200px; padding-top: 10px" id="section-home" >
             <div class="container" >
                     <div class="row align-items-center justify-content-center text-center">
                         <div class=" col-md-5 mb-lg-0" >
-                                <h1 class=" text-white font-weight-light text-uppercase font-weight-bold" style="font-size: 42px" >My Portofolio</h1>
-                                <p class="mb-5 text-white" style="font-size: 20px">Rita Ajeng Nugraheni</p>
-                                <p ><a href="#section-about" class="start" style="font-size: 20px">Start</a></p>
+                                <h1 class=" text-white font-weight-light text-uppercase font-weight-bold" style="font-size: 40px" id="typing">Undangan</h1>
+                                <p class="mb-3 text-white" style="font-size: 20px">Trah Partotarunan</p>
+                                <div class="animation" >
+                                  <div class="mb-2 launch-time">
+                                    <div>
+                                      <p id="days">00</p>
+                                      <span>Hari</span>
+                                    </div>
+                                    <div>
+                                      <p id="hours">00</p>
+                                      <span>Jam</span>
+                                    </div>
+                                    <div>
+                                      <p id="minutes">00</p>
+                                      <span>Menit</span>
+                                    </div>
+                                    <div>
+                                      <p id="seconds">00</p>
+                                      <span>Detik</span>
+                                    </div>
+                                  </div>
+                                
+                                <p class="mb-5 font-weight-bold" style="color: white">Ahad, 23 April 2023</p>
+                                <p ><a href="#section-about" class="start" style="font-size: 20px">Buka</a></p>
+                              </div>
                         </div>
                     </div>
             </div>
@@ -78,74 +139,105 @@
         -->
 
         <div class="site-section" id="section-about" style="padding-bottom: 90px; padding-top: 80px">
-                <div class="container">
+                <div class="container reveal">
                   <div class="row mb-5">
                     
-                    <div class="col-md-5 ml-auto mb-5 order-md-2" >
-                      <img src="img/profile2.jpg" alt="" class="img-fluid mx-auto" style="width: 500px; margin-top: 30px">
+                    <div class="col-md-5 ml-auto mb-5 order-md-2 animation" >
+                      <!-- <div class="mapouter"><div class="gmap_canvas"><iframe width="770" height="510" id="gmap_canvas" src="https://maps.google.com/maps?q=california&t=&z=7&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://2yu.co">2yu</a><br><style>.mapouter{position:relative;text-align:right;height:510px;width:770px;}</style><a href="https://embedgooglemap.2yu.co">html embed google map</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:510px;width:770px;}</style></div></div> -->
+                      <img src="img/as.jpg" alt="" class="img-fluid mx-auto" style="width: 500px; margin-top: 30px">
                     </div>
                     <div class="col-md-6 order-md-1" >
                       <div class="text-left pb-1  mb-4">
-                        <h2 class="judul font-weight-bold " >About Me</h2>
+                        <h2 class="judul font-weight-bold " >Informasi Acara</h2>
                         <!-- <p>==============</p> -->
                       </div>
-                      <p class="font-grey">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis deleniti reprehenderit animi est eaque corporis! Nisi, asperiores nam amet doloribus, soluta ut reiciendis. Consequatur modi rem, vero eos ipsam voluptas.Blanditiis deleniti reprehenderit animi est eaque corporis! Nisi, asperiores nam amet doloribus, soluta ut reiciendis. Consequatur modi rem, vero eos ipsam voluptas.</p>
-                      <p class="mb-5 font-grey">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam quas esse nam tenetur necessitatibus alias. Sapiente repellat hic beatae vero, labore aperiam eligendi consequatur quis provident tempore, nihil suscipit itaque?</p>
-                      <ul class="sekolah font-grey">
-                        <li>Telkom University</li>
-                        <li>SMA N 1 CAWAS, KLATEN</li>
-                        <li>SMP N 1 CAWAS, KLATEN</li>
-                      </ul>
-                      
+                      <div class="animation">
+                        <p class="font-grey">Assalam'mualaikum wr wb.</p>
+                        <p class="mb-3 font-grey">Kami haturkan undangan terkait dengan acara <span style="color:  #023047;" class="font-weight-bold">Halal Bi Halal Trah Parto Tarunan</span> dalam rangka menjalin silaturahmi dan merayakan Hari Raya Idul Fitri 1444 H, acara tersebut akan diselengarakan pada:</p>
+                        <!-- <ul class="sekolah font-grey"> -->
+                         <div class="event font-grey mb-4">
+                           <div>
+                             <p>Hari, Tanggal &nbsp;</p>
+                             <p>Waktu</p>
+                             <p>Tempat</p>
+                           </div>
+                           <div>
+                            <p>:</p>
+                            <p>:</p>
+                            <p>:</p>
+                           </div>
+                           <div>
+                            <p>&nbsp; Ahad, 23 April 2023</p>
+                            <p>&nbsp; 11:00 sd 14:00 WIB</p>
+                            <p>&nbsp; Hotel Grand Tjokro, Klaten</p>
+                           </div>
+                         </div>
+                         <p><a href="https://www.google.com/maps/place/Tjokro+Hotel+Klaten/@-7.710395,110.5933063,17z/data=!3m1!4b1!4m9!3m8!1s0x2e7a440d0c261333:0x62bc2f83897cee24!5m2!4m1!1i2!8m2!3d-7.710395!4d110.595495!16s%2Fg%2F11_f0jbpk" class="btn-map px-4 py-2">Lihat Peta Lokasi</a></p>
+                      </div>
                     </div>
-                    
                   </div>
                 </div>
               </div>
 
-      <div class="site-section bg-foto overlay" style="background-image: url(img/bg-foto-4.PNG); padding-bottom: 90px; padding-top: 100px" id="section-experience">
-        <div class="container">
+      <div class="site-section bg-foto overlay" style="background-image: url(img/bg-foto-4.jpg); padding-bottom: 90px; padding-top: 100px" id="section-experience">
+        <div class="container reveal">
           <div class="row justify-content-center mb-4">
               <div class="col-md-7 pb-1 text-center ">
-                  <h2 class="font-weight-bold judul-putih ">Experience</h2>
-                  <p class="text-white judul-putih">Project</p>
+                  <h2 class="font-weight-bold judul-putih ">Susunan Acara</h2>
+                  <p class="text-white judul-putih">Halal Bi Halal</p>
               </div>
           </div>
           <div class="row">
               <div class="col-md-6 col-lg-4 mb-5 mb-lg-0">
                   <div class="experience-item">
                     <span class="number font-weight-bold">1</span>
-                    <div class="font-putih font-weight-light sub-project pb-4">Chat Aja!</div>
-                    <p class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt praesentium dicta consectetur fuga neque fugit a at. Cum quod vero assumenda iusto.
+                    <div class="font-putih font-weight-light sub-project pb-4">Pembukaan</div>
+                    <div style="color: white;" class="mb-3">
+                      <!-- <li>Pembacaan Ayat Suci Al'Quran</li> -->
+                      <li>Sambutan Ketua Panitia</li>
+                      <li>Ikrar Halalbihalal</li>
+                    </div>
+                    <!-- <p class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt praesentium dicta consectetur fuga neque fugit a at. Cum quod vero assumenda iusto.
                         Incidunt praesentium dicta consectetur fuga neque fugit a at. Cum quod vero assumenda iusto.
-                    </p>
-                  <p>My role : UX Researcher</p>
+                    </p> -->
+                  <!-- <p>PIC : Dike, Pakdhe Trihono, Mbak Wening</p> -->
                   </div>
               </div>
               <div class="col-md-6 col-lg-4 mb-5 mb-lg-0">
                   <div class="experience-item">
                     <span class="number font-weight-bold">2</span>
-                    <div class="font-putih font-weight-light sub-project pb-4"> USeeTV BOX</div>
-                    <p class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt praesentium dicta consectetur fuga neque fugit a at. Cum quod vero assumenda iusto.
+                    <div class="font-putih font-weight-light sub-project pb-4">Acara Inti</div>
+                    <div style="color: white;" class="mb-3">
+                      <li>Makan Bersama</li>
+                      <li>Pembagian Doorprize</li>
+                      <!-- <li>Games</li> -->
+                    </div>
+                   
+                    <!-- <p class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt praesentium dicta consectetur fuga neque fugit a at. Cum quod vero assumenda iusto.
                         Incidunt praesentium dicta consectetur fuga neque fugit a at. Cum quod vero assumenda iusto.
-                    </p>
-                    <p>My Role : UX Researcher</p>
+                    </p> -->
+                    <!-- <p>PIC : Dwi Ajeng, Rita Ajeng</p> -->
                   </div>
               </div>
               <div class="col-md-6 col-lg-4 mb-5 mb-lg-0">
                   <div class="experience-item">
                     <span class="number font-weight-bold ">3</span>
-                    <div class="font-putih font-weight-light sub-project pb-4">Knowledge Repository</div>
-                    <p class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt praesentium dicta consectetur fuga neque fugit a at. Cum quod vero assumenda iusto.
+                    <div class="font-putih font-weight-light sub-project pb-4">Penutupan</div>
+                    <div style="color: white;" class="mb-3">
+                      <li>Foto Bersama</li>
+                      <li>Penutupan Acara</li>
+                      <!-- <li>Games</li> -->
+                    </div>
+                    <!-- <p class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt praesentium dicta consectetur fuga neque fugit a at. Cum quod vero assumenda iusto.
                         Incidunt praesentium dicta consectetur fuga neque fugit a at. Cum quod vero assumenda iusto.
-                    </p>
-                    <p>My Role : UX Researcher</p>
+                    </p> -->
+                    <!-- <p>PIC : Rita Ajeng</p> -->
                   </div>
               </div>
           </div>
         </div>
       </div>
-      <div class="site-section " id="section-portofolio" style="background-size: cover; padding-bottom: 90px; padding-top: 80px">
+      <!-- <div class="site-section " id="section-portofolio" style="background-size: cover; padding-bottom: 90px; padding-top: 80px">
           <div class="container">
               <div class="row justify-content-center mb-4">
                   <div class="col-md-7 text-center " >
@@ -172,9 +264,9 @@
               </div>
              
           </div>
-      </div>
+      </div> -->
      
-      <div class="site-section " id="section-contact" style="background-color: rgb(247, 247, 247); padding-bottom: 90px; padding-top: 80px">
+      <!-- <div class="site-section " id="section-contact" style="background-color: rgb(247, 247, 247); padding-bottom: 90px; padding-top: 80px">
           <div class="container">
               <div class="row justify-content-center mb-4 ">
                   <div class="col-md-7 pb-1 text-center ">
@@ -213,15 +305,15 @@
               
              
           </div>
-      </div>
+      </div> -->
       <footer style="background-color: black">
           <div class="site-section" id="section-portofolio">
             <div class="container" >
               <div class="text-center">
-                <p class="judul-putih font-weight-bold "> My Social Media</p>
+                <p class="judul-putih font-weight-bold ">Terima kasih atas perhatiannya</p>
               </div>
               <div class="row text-center">
-                <div class="col-4 text-right">
+                <!-- <div class="col-4 text-right">
                   <a href="https://web.facebook.com/ritaajeng.n">
                       <img class="foto-portofolio-sosial-media " src="img/facebook.png" alt="">
                   </a>
@@ -235,7 +327,7 @@
                   </div>
                   <div class="col-4 text-left">
                      <a href="https://www.instagram.com/ritajeng_07/"> <img class="foto-portofolio-sosial-media " src="img/instagram.png" alt=""></a> 
-                  </div>
+                  </div> -->
                   
               </div>
               
